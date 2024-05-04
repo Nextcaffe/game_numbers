@@ -1,7 +1,4 @@
 def specific_action_two_numbers(action: int, number_1: int, number_2: int) -> int:
-    # sum = number_1 + number_2
-    # number_1 = max(number_1, number_2)
-    # number_2 = sum - number_1
     number_1, number_2 = max(number_1, number_2), min(number_1, number_2)
     if action == 1:
         return number_1 + number_2

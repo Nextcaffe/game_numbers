@@ -21,7 +21,6 @@ def collection_of_information(number: int) -> bool:
     given_answer = digits[i_1]
     number_one_to_transform = digits[i_2]
     number_two_to_transform = digits[i_3]
-    # number_two_to_transform = sum(digits) - given_answer - number_one_to_transform
     answer_and_numbers = [given_answer, number_one_to_transform, number_two_to_transform]
     order = [i_1, i_2, i_3]
 

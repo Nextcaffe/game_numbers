@@ -1,5 +1,5 @@
 import random
-from transformation import collection_of_information
+from composition import collection_of_information
 
 while True:    
     number = random.randint(0, 999)

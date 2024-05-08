@@ -42,13 +42,13 @@ def find_all_answers(digits: list) -> None:
                             transform_2 = 0
                             transform_3 = 0
                             break
-# find_all_answers([1,6,4])
 
 def find_min_answer(digits: list) -> None:
     transform_1, transform_2, transform_3 = 0,0,0
     best_weight = 105
     best_transform = [0,0,0]
     best_action = 0
+    best_numbers = [0, 0]
     weight_transform = [0, 10, 30, 12, 32]
     weight_action = [1, 2, 5, 7]
     best_numbers_index = [0,0]
@@ -81,7 +81,8 @@ def find_min_answer(digits: list) -> None:
                         best_answer_index = i_1
                         best_numbers_index = [i_2, i_3]
                         best_answer = new_answer
-                        best_numbers = [max(number_2, number_3), min(number_2, number_3)]
+                        best_numbers[0] = max(new_number_2, new_number_3)
+                        best_numbers[1] = min(new_number_2, new_number_3)
                 transform_1 += 1
                 if transform_1 > 4:
                     transform_1 = 0
@@ -107,4 +108,3 @@ def find_min_answer(digits: list) -> None:
                 'был получен разряд', what_digit[best_answer_index], 'при помощи', what_action[best_action-1])
         print(best_numbers[0], what_action_symbols[best_action-1], best_numbers[1], '=', best_answer)
         print(' ')
-# find_min_answer([7,8,9])

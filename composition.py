@@ -6,7 +6,7 @@ def collection_of_information(number: int) -> bool:
     tens = (number // 10) % 10
     units = number % 10 
     digits = [hundreds, tens, units]
-    print('Полученное число:', number)
+    print('Полученное число: ', *digits, sep='')
     print('Выберите, какой разряд будет итоговым ответом: \n1 - сотен, 2 - десятков, 3 - единиц.')
     print('Для выхода нажмите 0. Чтобы посмотреть решение нажмите 4')
     answer_digit = int(input())
